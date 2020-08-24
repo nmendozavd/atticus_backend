@@ -1,6 +1,7 @@
 const express = require('express');
 const song = require('../controller/song')
 
+// using router object for routes
 const router = express.Router();
 
 router
@@ -13,4 +14,5 @@ router
     .get(song.getSong)
     .put(song.updateSong)
     .delete(song.deleteSong);
+    
 module.exports = router
