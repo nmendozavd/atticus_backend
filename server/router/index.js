@@ -5,10 +5,12 @@ const router = express.Router();
 
 router
     .route('/')
-    .get()
+    .get(song.getAll)
     .post()
     .put()
     .delete();
 
-
+router
+    .route('/:id')
+    .get(song.getSong)
 module.exports = router
