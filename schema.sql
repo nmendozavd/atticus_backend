@@ -13,3 +13,5 @@ CREATE TABLE IF NOT EXISTS songs (
 
   PRIMARY KEY(id)
 );
+
+-- Decided to move forward with a regular ID to have a working product. Simply ran out of time to implement uuid. Also read that uuid was better supported with PostgreSQL instead of MYSQL.
