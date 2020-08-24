@@ -1,4 +1,4 @@
--- CREATE DATABASE IF NOT EXISTS SDC;
+CREATE DATABASE IF NOT EXISTS atticus;
 
 USE atticus;
 
@@ -7,9 +7,9 @@ CREATE TABLE IF NOT EXISTS songs (
   name VARCHAR (255),
   genre ENUM('Rock', 'Pop', 'Rap', 'R&B') NOT NULL,
   artist VARCHAR (255),
-  length 
+  length INT NOT NULL,
   song VARCHAR (2056),
   ranking INT(5) UNSIGNED NOT NULL,
 
-  PRIMARY KEY(host_id)
+  PRIMARY KEY(id)
 );
