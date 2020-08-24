@@ -4,6 +4,7 @@
 ## How to Run Code:
 * To install depedencies run: npm install
 * To upload mysql schema into databse run: mysql -u root < schema.sql (password is empty) 
+* To run code: npm start
 
 ## How to Test Code (API Routes):
 Utilized PostMan:
@@ -30,7 +31,7 @@ POST 'http://localhost:3000/api/' - Creates a new song
 ```
 PUT 'http://localhost:3000/api/:id' - Updates a song by id
 * request body
-  ```javascript 
+```javascript 
   {
     "name": VARCHAR (255),
     "genre": ENUM('Rock', 'Pop', 'Rap', 'R&B'),
@@ -40,5 +41,5 @@ PUT 'http://localhost:3000/api/:id' - Updates a song by id
     "ranking": INT(5) UNSIGNED
   }
 ```
-  DELETE 'http://localhost:3000/api/:id' - Deletes a song by id
+DELETE 'http://localhost:3000/api/:id' - Deletes a song by id
 * request body is empty
