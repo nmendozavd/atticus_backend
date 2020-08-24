@@ -27,6 +27,17 @@ GET '/api/' - Reads all songs
 GET 'api/:id' - Reads song info for one song id
 * request body is empty
 * returns an array with one object that includes id, name, genre, artist, length, song, and ranking.
+```javascript
+[
+  {
+    "name": VARCHAR (255),
+    "genre": ENUM('Rock', 'Pop', 'Rap', 'R&B'),
+    "artist": VARCHAR (255),
+    "length": INT,
+    "song": VARCHAR (2056),
+    "ranking": INT(5) UNSIGNED
+  }
+]
 
 POST 'api/' - Creates a new song 
 * request body
