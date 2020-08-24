@@ -38,6 +38,7 @@ GET 'api/:id' - Reads song info for one song id
     "ranking": INT(5) UNSIGNED
   }
 ]
+```
 
 POST 'api/' - Creates a new song 
 * request body
