@@ -22,7 +22,14 @@ module.exports = {
         })
     },
     deleteSong: (req, res) => {
-
+        const id = req.params.id
+        song.deleteSong(id, (err, data) => {
+            if (err) {
+                return res.status(400).send(err)
+            } else {
+                return res.status(200).send(data)
+            }
+        })
     },
     createSong: (req, res) => {
         const entry = req.body

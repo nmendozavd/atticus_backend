@@ -6,11 +6,11 @@ const router = express.Router();
 router
     .route('/')
     .get(song.getAll)
-    .post(song.createSong)
-    .put()
-    .delete();
+    .post(song.createSong);
 
 router
     .route('/:id')
     .get(song.getSong)
+    .put(song.updateSong)
+    .delete(song.deleteSong);
 module.exports = router
