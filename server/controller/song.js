@@ -25,7 +25,14 @@ module.exports = {
 
     },
     createSong: (req, res) => {
-
+        const entry = req.body
+        song.createSong(entry, (err, data) => {
+            if (err) {
+                return res.status(400).send(err)
+            } else {
+                return res.status(200).send(data)
+            }
+        })
     },
     updateSong: (req, res) => {
 
