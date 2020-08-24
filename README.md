@@ -58,4 +58,4 @@ DELETE '/api/:id' - Deletes a song by id
 * request body is empty
 
 
-* If time was permitted, also wanted to implement JEST and SuperTest to test endpoints *
+*If time permitted, I also would've implemented JEST and SuperTest to test endpoints*
