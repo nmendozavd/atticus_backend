@@ -3,7 +3,7 @@
 
 ## How to Run Code:
 * To install depedencies run: <code>npm install</code> 
-* To upload mysql schema into databse run: <code> mysql -u root < schema.sql </code> (no password). Otherwise run: <code> ysql -u root -p yourPassword < schema.sql </code> (insert your password)
+* To upload mysql schema into databse run: <code> mysql -u root < schema.sql </code> (no password). Otherwise run: <code> mysql -u root -p yourPassword < schema.sql </code> (insert your password)
 * To run code: <code>npm start</code> (runs on port 3000)
 
 ## How to Test Code (API Routes):
