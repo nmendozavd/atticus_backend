@@ -42,7 +42,22 @@ module.exports = {
         })
     },
     updateSong: (req, res) => {
-
+        const id = req.params.id
+        const entry = req.body
+        song.getSong(id, (err, data) => {
+            if (err) {
+                return res.status(400).send(err)
+            } else {
+                const songToUpdate = data[0].id
+                song.updateSong(songToUpdate, entry, (err, data) => {
+                    if (err) {
+                        return res.status(400).send(err)
+                    } else {
+                        return res.status(200).send(data)
+                    }
+                })
+            }
+        })
     }
 
 }
