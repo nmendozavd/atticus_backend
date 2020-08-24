@@ -1,11 +1,25 @@
 const express = require('express');
-// const song = require('../database/models')
+const song = require('../../database/models')
 
 module.exports = {
+    getAll: (req, res) => {
+        song.getAllSongs((err, data) => {
+            if (err) {
+                return res.status(400).send(err)
+            } else {
+                return res.status(200).send(data)
+            }
+        })
+    },
     getSong: (req, res) => {
-        // song.getSong()
-        //     .then((data) => res.status(200).send(data))
-        //     .catch(err => res.status(400).send(err))
+        const id = req.params.id
+        song.getSong(id, (err, data) => {
+            if (err) {
+                return res.status(400).send(err)
+            } else {
+                return res.status(200).send(data)
+            }
+        })
     },
     deleteSong: (req, res) => {
 
