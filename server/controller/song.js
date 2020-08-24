@@ -6,9 +6,9 @@ module.exports = {
     getAll: (req, res) => {
         song.getAllSongs((err, data) => {
             if (err) {
-                return res.status(400).send(err)
+                res.status(400).send(err)
             } else {
-                return res.status(200).send(data)
+                res.status(200).send(data)
             }
         })
     },
@@ -17,9 +17,9 @@ module.exports = {
         const id = req.params.id
         song.getSong(id, (err, data) => {
             if (err) {
-                return res.status(400).send(err)
+                res.status(400).send(err)
             } else {
-                return res.status(200).send(data)
+                res.status(200).send(data)
             }
         })
     },
@@ -28,9 +28,9 @@ module.exports = {
         const id = req.params.id
         song.deleteSong(id, (err, data) => {
             if (err) {
-                return res.status(400).send(err)
+                res.status(400).send(err)
             } else {
-                return res.status(200).send(data)
+                res.status(200).send(data)
             }
         })
     },
@@ -39,9 +39,9 @@ module.exports = {
         const entry = req.body
         song.createSong(entry, (err, data) => {
             if (err) {
-                return res.status(400).send(err)
+                res.status(400).send(err)
             } else {
-                return res.status(200).send(data)
+                res.status(200).send(data)
             }
         })
     },
@@ -58,9 +58,9 @@ module.exports = {
                 // pass in id to update, and JSON entry
                 song.updateSong(songToUpdate, entry, (err, data) => {
                     if (err) {
-                        return res.status(400).send(err)
+                        res.status(400).send(err)
                     } else {
-                        return res.status(200).send(data)
+                        res.status(200).send(data)
                     }
                 })
             }
