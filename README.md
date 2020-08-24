@@ -57,5 +57,5 @@ PUT '/api/:id' - Updates a song by id
 DELETE '/api/:id' - Deletes a song by id
 * request body is empty
 
-
+*Decided to move forward with a regular ID to have a working product. Simply ran out of time to implement uuid. Also read that uuid was better supported with PostgreSQL instead of MYSQL towards the end of completing the application*
 *If time permitted, I also would've implemented JEST and SuperTest to test endpoints*
